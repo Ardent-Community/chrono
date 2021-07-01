@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "chronocli"
-version = "0.1.2"
+version = "0.1.0"
 description = ""
 authors = ["Ardent Community <arghyasarkar.nolan@gmail.com>"]
 
