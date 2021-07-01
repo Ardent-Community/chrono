@@ -31,7 +31,6 @@ class Configuration:
         self.__key = self.__get_encryption_key()
         self.__user_data = self.__get_user_data()
 
-
     def __get_encryption_key(self) -> str:
         # * creating key if not exists and reading it
         key_file = os.path.join(self.datadir, "key.pkl")
@@ -55,7 +54,8 @@ class Configuration:
         if not os.path.exists(self.data_file):
             with open(self.data_file, 'wb') as df:
                 self.__user_data = json.dumps(({"api-key": ""}))
-                pickle.dump(cryptocode.encrypt(self.__user_data, self.__key), df)
+                pickle.dump(cryptocode.encrypt(
+                    self.__user_data, self.__key), df)
 
             self.__user_data = json.loads(self.__user_data)
 
