@@ -6,6 +6,7 @@ authors = ["Ardent Community <arghyasarkar.nolan@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+cryptocode = "^0.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
