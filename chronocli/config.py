@@ -36,9 +36,9 @@ class Configuration:
         key_file = os.path.join(self.datadir, "key.pkl")
 
         if not os.path.exists(key_file):
-            # * creating key if not exists randomly of length of 50 chars
-            key = ''.join([random.choice(
-                [string.ascii_letters, string.digits, string.punctuation]) for _ in range(50)])
+            # * creating key if not exists randomly of length of 100 chars
+            key = ''.join([random.choice(random.choice(
+                [string.ascii_letters, string.digits, string.punctuation])) for _ in range(100)])
             with open(key_file, 'wb') as kf:
                 pickle.dump(key, kf)
 
